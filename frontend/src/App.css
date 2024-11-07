@@ -1,0 +1,25 @@
+/* src/App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard, .request-simulator {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.rate-limit-form, .request-simulator input, button {
+  display: block;
+  margin: 10px auto;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
