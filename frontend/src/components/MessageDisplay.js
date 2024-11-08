@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function MessageDisplay({ message, errorMessage, protectedResponse, resetTimer }) {
   return (
+
+    //to display messages
     <>
       {message && (
         <div className="mb-8">

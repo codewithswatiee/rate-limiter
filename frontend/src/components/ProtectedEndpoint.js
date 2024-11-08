@@ -1,17 +1,13 @@
 import React from 'react';
 
-export default function ProtectedEndpoint({
-  userId,
-  setErrorMessage,
-  setProtectedResponse,
-  setResetTimer,
-}) {
+export default function ProtectedEndpoint({  userId, setErrorMessage, setProtectedResponse, setResetTimer,}) {
   const accessProtectedEndpoint = async () => {
     if (!userId) {
       setErrorMessage('User ID is required');
       return;
     }
     try {
+
       const response = await fetch(`http://localhost:4000/protected?userId=${userId}`);
       const data = await response.json();
       if (response.status === 429) {
@@ -31,6 +27,8 @@ export default function ProtectedEndpoint({
     }
   };
 
+
+//   timer for 60 seconds
   const startResetTimer = () => {
     setResetTimer(60);
     const timerId = setInterval(() => {
